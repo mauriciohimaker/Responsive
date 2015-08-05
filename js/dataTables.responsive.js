@@ -439,6 +439,7 @@ Responsive.prototype = {
 		var selector = typeof target === 'string' ? target : 'td';
 
 		// Click handler to show / hide the details rows when they are available
+                $(dt.table().body() ).off('click');
 		$( dt.table().body() ).on( 'click', selector, function (e) {
 			// If the table is not collapsed (i.e. there is no hidden columns)
 			// then take no action
